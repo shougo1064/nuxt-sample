@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="number">{{ count }}</div>
+  <div :class="$style.container">
+    <div :class="$style.number">{{ count }}</div>
     <!-- <v-btn class="mx-1" fab dark color="blue" @click="plus">
       <v-icon dark> mdi-plus </v-icon>
     </v-btn>
@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" module>
 .container {
   .number {
     font-size: 64px;
