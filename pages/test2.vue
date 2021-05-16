@@ -22,14 +22,17 @@ export default {
     }
   },
 
-  created() {
-    console.log('created')
-
-    this.$axios
-      .get('http://jsonplaceholder.typicode.com/users')
-      .then((response) => {
-        this.users = response.data
-      })
+  async created() {
+    try {
+      const response = await this.$axios.get(
+        'http://jsonplaceholder.typicode.com/userssss'
+      )
+      console.log(response)
+    } catch (err) {
+      const res = err.response
+      console.log(res)
+    }
+    // console.log(response)
   },
 
   mounted() {
